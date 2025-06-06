@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locanda dell'Angelo - Mappa Interattiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="language-switcher">
+            <button onclick="changeLanguage('it')">🇮🇹</button>
+            <button onclick="changeLanguage('en')">🇬🇧</button>
+            <button onclick="changeLanguage('fr')">🇫🇷</button>
+            <button onclick="changeLanguage('de')">🇩🇪</button>
+            <button onclick="changeLanguage('es')">🇪🇸</button>
+        </div>
+        <h1>Locanda dell'Angelo - Mappa Interattiva</h1>
+    </header>
+
+    <main>
+        <section class="user-form">
+            <form id="profileForm">
+                <label>Tipo ospite:
+                    <select id="type">
+                        <option value="single">Single</option>
+                        <option value="couple">Coppia</option>
+                        <option value="family">Famiglia con bambini</option>
+                    </select>
+                </label>
+                <label>Età:
+                    <select id="age">
+                        <option value="18-30">18-30</option>
+                        <option value="31-50">31-50</option>
+                        <option value="51-65">51-65</option>
+                        <option value="65+">65+</option>
+                    </select>
+                </label>
+                <label>Prima volta nella zona?
+                    <select id="firstTime">
+                        <option value="yes">Sì</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+                <label>Quanti giorni ti fermi?
+                    <input type="number" id="days" min="1" max="30" value="1">
+                </label>
+                <button type="submit">Personalizza</button>
+            </form>
+        </section>
+        <div id="map"></div>
+    </main>
+
+    <footer>
+        <p>© 2025 Locanda dell'Angelo - Ameglia (SP)</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
